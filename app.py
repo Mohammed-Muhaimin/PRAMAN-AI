@@ -8,7 +8,11 @@ import io
 import hashlib  # For SHA-256 hashing
 import json     # For the ledger
 import os       # For checking if files exist
+from dotenv import load_dotenv  # For loading environment variables
 import google.generativeai as genai # For GPT-OSS insights
+
+# Load environment variables from .env file
+load_dotenv()
 
 # --- 1. Constants and Model Parameters ---
 IMG_WIDTH = 128
@@ -16,11 +20,11 @@ IMG_HEIGHT = 128
 MODEL_PATH = 'my_change_detection_model.h5'
 LEDGER_FILE = 'ledger.json' 
 
-# --- API KEY (Hardcoded as requested) ---
-# !!! --- SECURITY WARNING --- !!!
-# DO NOT share this file or upload it to GitHub.
-GEMINI_API_KEY = "AIzaSyAp2o7qDzuQlffFmRroW1ouA6PmiKRduDo"
-# --- END WARNING ---
+# --- API KEY (Load from environment variable) ---
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+if not GEMINI_API_KEY:
+    st.error("⚠️ GEMINI_API_KEY not found. Please set it in your .env file or environment variables.")
+    st.stop()
 
 # --- 2. Hashing & Ledger Functions (Same as before) ---
 def calculate_hash(image_file):
