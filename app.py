@@ -1,6 +1,13 @@
 import streamlit as st
-import tensorflow as tf
-from tensorflow.keras.models import load_model
+try:
+    import tensorflow as tf
+    from tensorflow.keras.models import load_model
+    TF_AVAILABLE = True
+except Exception:
+    # Allow the app to run even if TensorFlow isn't installed or is broken.
+    tf = None
+    load_model = None
+    TF_AVAILABLE = False
 import numpy as np
 from PIL import Image
 import time
