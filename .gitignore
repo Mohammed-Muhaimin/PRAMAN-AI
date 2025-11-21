@@ -39,7 +39,7 @@ env/
 *.secret
 
 # Model files (optional - include if they're large)
-*.h5
+# *.h5
 *.pkl
 
 # Ledger files (optional - include if sensitive)
