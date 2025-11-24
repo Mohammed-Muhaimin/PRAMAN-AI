@@ -1,4 +1,4 @@
-# PRAMAN AI - AI-Powered Change Detection System
+# PRAMAN AI - AI Powered Change Detection System
 
 A Streamlit application that uses deep learning to detect changes between images and provides AI-powered insights using GPT-OSS API.
 
@@ -67,9 +67,9 @@ The application uses gpt oss API for AI-powered insights. Make sure your API key
 
 ## Author
 
-Mohammed Muhaimin
-Abdulla Khan
-Syed Abdulla Nawaz
+Mohammed-Muhaimin
+Abdulla-Khan
+Syed-Abdulla-Nawaz
 
 ## License
 
