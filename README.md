@@ -23,8 +23,8 @@ A Streamlit application that uses deep learning to detect changes between images
 
 1. Clone this repository:
 ```bash
-git clone <your-repo-url>
-cd ARGI
+git clone https://github.com/Mohammed-Muhaimin/PRAMAN-AI
+cd 
 ```
 
 2. Create a virtual environment:
@@ -67,7 +67,9 @@ The application uses gpt oss API for AI-powered insights. Make sure your API key
 
 ## Author
 
-Mohammed-Muhaimin
+Mohammed Muhaimin
+Abdulla Khan
+Syed Abdulla Nawaz
 
 ## License
 
